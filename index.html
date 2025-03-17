@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Online Market</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Шапка сайта -->
+  <header>
+    <div class="logo" id="siteLogo">Online Market</div>
+
+    <!-- Корзина (мобильная) -->
+    <div class="cart-btn mobile-cart" onclick="openCart()">
+      <span id="cartTextMobile">Корзина</span> (<span id="cartCountMobile">0</span>)
+    </div>
+
+    <!-- Бургер-меню (мобильная) -->
+    <div class="burger" id="burgerBtn">&#9776;</div>
+
+    <!-- Навигация -->
+    <nav class="nav-links" id="navLinks">
+      <!-- Языки -->
+      <div class="language-switcher">
+        <button id="lang-ru" class="lang-btn active">RU</button>
+        <button id="lang-kz" class="lang-btn">KZ</button>
+      </div>
+
+      <!-- Поиск -->
+      <div class="nav-item">
+        <input type="text" id="searchInput" placeholder="Поиск..." />
+      </div>
+
+      <!-- Категории -->
+      <div class="nav-item">
+        <select id="categorySelect"></select>
+      </div>
+
+      <!-- Сортировка -->
+      <div class="nav-item">
+        <select id="sortSelect">
+          <option value="none" selected>Сортировать по цене</option>
+          <option value="asc">По возрастанию</option>
+          <option value="desc">По убыванию</option>
+        </select>
+      </div>
+
+      <!-- Корзина (десктоп) -->
+      <div class="cart-btn desktop-cart" onclick="openCart()">
+        <span id="cartText">Корзина</span> (<span id="cartCount">0</span>)
+      </div>
+    </nav>
+  </header>
+
+  <!-- Основная часть страницы -->
+  <main>
+    <!-- Hero-секция: главный баннер / доверие -->
+    <section id="heroSection" class="hero" style="display: none;">
+      <div class="hero-content">
+        <h1>Добро пожаловать в Online Market!</h1>
+        <p>Здесь вы найдете свежие овощи, фрукты и многое другое по лучшим ценам. Мы работаем напрямую с локальными фермерами и гарантируем качество и свежесть каждого продукта.</p>
+        <ul class="benefits">
+          <li>Только натуральные и свежие продукты</li>
+          <li>Доступные цены и постоянные акции</li>
+          <li>Удобная оплата через Kaspi Pay</li>
+          <li>Быстрое оформление заказа через WhatsApp</li>
+        </ul>
+        <button class="hero-btn" onclick="scrollToProducts()">
+          Перейти к покупкам
+        </button>
+      </div>
+    </section>
+
+    <!-- Секция товаров (каталог) -->
+    <section id="productsSection" class="active">
+      <h1 id="pageTitle">Все товары</h1>
+      <div id="productsContainer" class="products-container"></div>
+    </section>
+
+    <!-- Страница отдельного товара -->
+    <section id="productDetailSection" class="hidden">
+      <button class="back-btn" onclick="closeProductDetail()">← Назад</button>
+      <div id="productDetail"></div>
+    </section>
+
+    <!-- Корзина -->
+    <section id="cartSection" class="hidden">
+      <button class="back-btn" onclick="closeCart()">← Назад</button>
+      <h2 id="cartTitle">Корзина</h2>
+      <div id="cartItems"></div>
+      <div class="cart-total">
+        <span id="cartTotalLabel">Итого:</span>
+        <span id="cartTotalPrice">0</span>
+      </div>
+      <button class="order-btn" onclick="checkoutOrder()">
+        <span id="checkoutBtnText">Оформить заказ (WhatsApp)</span>
+      </button>
+      <button class="pay-btn" onclick="payOrder()">
+        <span id="payBtnText">Оплатить (Kaspi Pay)</span>
+      </button>
+    </section>
+  </main>
+
+  <!-- Подвал сайта -->
+  <footer>
+    <div class="footer-info">
+      <div class="footer-about">
+        <h3>О нас</h3>
+        <p>Online Market – это ваш надежный поставщик свежих и качественных продуктов. Мы сотрудничаем с проверенными фермерами, заботимся об экологии и удобстве клиентов.</p>
+      </div>
+      <div class="footer-contacts">
+        <h3>Контакты</h3>
+        <p>Телефон: +7 777 000 00 00</p>
+        <p>Email: info@onlinemarket.kz</p>
+        <p>Адрес: Алматы, ул. Достык, д. 10</p>
+      </div>
+      <div class="footer-feedback">
+        <h3>Обратная связь</h3>
+        <form onsubmit="return handleFeedbackForm(event)">
+          <div>
+            <label for="userName">Ваше имя</label><br />
+            <input type="text" id="userName" required />
+          </div>
+          <div>
+            <label for="userMessage">Сообщение</label><br />
+            <textarea id="userMessage" rows="3" required></textarea>
+          </div>
+          <button type="submit">Отправить</button>
+        </form>
+      </div>
+    </div>
+    <p id="footerText">© 2025 Мой Интернет-магазин</p>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>

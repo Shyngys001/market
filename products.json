@@ -1,0 +1,62 @@
+[
+    {
+      "id": 1,
+      "category": "vegetables",
+      "name_ru": "Помидоры",
+      "name_kz": "Қызанақ",
+      "description_ru": "Свежие помидоры из теплицы, сочные и ароматные.",
+      "description_kz": "Жаңа қызанақтар, шырынды және хош иісті.",
+      "price": 800,
+      "image": "https://picsum.photos/id/1080/400/400"
+    },
+    {
+      "id": 2,
+      "category": "fruits",
+      "name_ru": "Яблоки",
+      "name_kz": "Алма",
+      "description_ru": "Хрустящие зелёные яблоки сорта Грэнни Смит.",
+      "description_kz": "Тәтті және қытырлақ жасыл алмалар (Грэнни Смит).",
+      "price": 600,
+      "image": "https://picsum.photos/id/219/400/400"
+    },
+    {
+      "id": 3,
+      "category": "meat",
+      "name_ru": "Говядина",
+      "name_kz": "Сиыр еті",
+      "description_ru": "Мясо высшего качества для стейков и бульонов.",
+      "description_kz": "Стейктер мен сорпаларға арналған жоғары сапалы сиыр еті.",
+      "price": 2500,
+      "image": "https://picsum.photos/id/292/400/400"
+    },
+    {
+      "id": 4,
+      "category": "berries",
+      "name_ru": "Клубника",
+      "name_kz": "Құлпынай",
+      "description_ru": "Спелая, ароматная клубника из местных хозяйств.",
+      "description_kz": "Жергілікті шаруашылықтардан алынған піскен, хош иісті құлпынай.",
+      "price": 1800,
+      "image": "https://picsum.photos/id/1081/400/400"
+    },
+    {
+      "id": 5,
+      "category": "fish",
+      "name_ru": "Форель",
+      "name_kz": "Форель (балық)",
+      "description_ru": "Свежая радужная форель из горных озёр.",
+      "description_kz": "Таулы көлдердің жаңа радужная форелі.",
+      "price": 3200,
+      "image": "https://picsum.photos/id/430/400/400"
+    },
+    {
+      "id": 6,
+      "category": "seafood",
+      "name_ru": "Креветки",
+      "name_kz": "Асшаян",
+      "description_ru": "Крупные замороженные креветки для салатов и горячих блюд.",
+      "description_kz": "Салаттар мен ыстық тағамдарға арналған үлкен мұздатылған асшаяндар.",
+      "price": 3500,
+      "image": "https://picsum.photos/id/857/400/400"
+    }
+  ]
