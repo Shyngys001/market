@@ -1,62 +1,76 @@
-[
+{
+  "products": [
     {
       "id": 1,
-      "category": "vegetables",
-      "name_ru": "Помидоры",
-      "name_kz": "Қызанақ",
-      "description_ru": "Свежие помидоры из теплицы, сочные и ароматные.",
-      "description_kz": "Жаңа қызанақтар, шырынды және хош иісті.",
-      "price": 800,
-      "image": "https://picsum.photos/id/1080/400/400"
+      "name": "Помидоры",
+      "price": 500,
+      "description": "Свежие помидоры из теплиц местных фермеров. Идеально подходят для салатов и соусов.",
+      "images": [
+        "https://images.unsplash.com/photo-1592928303863-8a64f3c2cd4b?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
+        "https://images.unsplash.com/photo-1542407246-122a48e57b77?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
+        "https://images.unsplash.com/photo-1560180588-509a59ef9f8f?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80"
+      ],
+      "category": "Овощи"
     },
     {
       "id": 2,
-      "category": "fruits",
-      "name_ru": "Яблоки",
-      "name_kz": "Алма",
-      "description_ru": "Хрустящие зелёные яблоки сорта Грэнни Смит.",
-      "description_kz": "Тәтті және қытырлақ жасыл алмалар (Грэнни Смит).",
-      "price": 600,
-      "image": "https://picsum.photos/id/219/400/400"
+      "name": "Огурцы",
+      "price": 400,
+      "description": "Хрустящие свежие огурцы без ГМО. Идеальны для летних холодных супов и нарезок.",
+      "images": [
+        "https://images.unsplash.com/photo-1592923272441-6fbb1b696e04?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
+        "https://images.unsplash.com/photo-1556802572-2c5d21f15262?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
+        "https://images.unsplash.com/photo-1510627498534-cf7e9002facc?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80"
+      ],
+      "category": "Овощи"
     },
     {
       "id": 3,
-      "category": "meat",
-      "name_ru": "Говядина",
-      "name_kz": "Сиыр еті",
-      "description_ru": "Мясо высшего качества для стейков и бульонов.",
-      "description_kz": "Стейктер мен сорпаларға арналған жоғары сапалы сиыр еті.",
-      "price": 2500,
-      "image": "https://picsum.photos/id/292/400/400"
+      "name": "Яблоки",
+      "price": 600,
+      "description": "Сочные и сладкие яблоки. Идеальны для полезного перекуса в течение дня.",
+      "images": [
+        "https://images.unsplash.com/photo-1567306226416-28f0efdc88ce?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
+        "https://images.unsplash.com/photo-1603215665644-9a0ad4dc3f04?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
+        "https://images.unsplash.com/photo-1582511906502-053c974aac3a?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80"
+      ],
+      "category": "Фрукты"
     },
     {
       "id": 4,
-      "category": "berries",
-      "name_ru": "Клубника",
-      "name_kz": "Құлпынай",
-      "description_ru": "Спелая, ароматная клубника из местных хозяйств.",
-      "description_kz": "Жергілікті шаруашылықтардан алынған піскен, хош иісті құлпынай.",
-      "price": 1800,
-      "image": "https://picsum.photos/id/1081/400/400"
+      "name": "Бананы",
+      "price": 750,
+      "description": "Спелые бананы, богатые калием и витамином B. Прекрасная основа для смузи.",
+      "images": [
+        "https://images.unsplash.com/photo-1574226516831-e1dff4204871?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
+        "https://images.unsplash.com/photo-1603052877335-fbc057a95b03?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
+        "https://images.unsplash.com/photo-1474150862348-b1670656a45b?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80"
+      ],
+      "category": "Фрукты"
     },
     {
       "id": 5,
-      "category": "fish",
-      "name_ru": "Форель",
-      "name_kz": "Форель (балық)",
-      "description_ru": "Свежая радужная форель из горных озёр.",
-      "description_kz": "Таулы көлдердің жаңа радужная форелі.",
-      "price": 3200,
-      "image": "https://picsum.photos/id/430/400/400"
+      "name": "Говядина",
+      "price": 3500,
+      "description": "Качественная говядина от местных фермеров. Подходит для стейков и бульонов.",
+      "images": [
+        "https://images.unsplash.com/photo-1639769345199-e822feda360c?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
+        "https://images.unsplash.com/photo-1596755577886-bbeb0efb2ed9?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
+        "https://images.unsplash.com/photo-1656398484490-f7f77da43b70?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80"
+      ],
+      "category": "Мясо"
     },
     {
       "id": 6,
-      "category": "seafood",
-      "name_ru": "Креветки",
-      "name_kz": "Асшаян",
-      "description_ru": "Крупные замороженные креветки для салатов и горячих блюд.",
-      "description_kz": "Салаттар мен ыстық тағамдарға арналған үлкен мұздатылған асшаяндар.",
-      "price": 3500,
-      "image": "https://picsum.photos/id/857/400/400"
+      "name": "Курица",
+      "price": 2200,
+      "description": "Нежная курица без гормонов. Подойдёт для запекания, жарки и супов.",
+      "images": [
+        "https://images.unsplash.com/photo-1603042898886-09c256ff3a5a?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
+        "https://images.unsplash.com/photo-1633332755192-727a05c4013d?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
+        "https://images.unsplash.com/photo-1601331221203-1aa29ca6e194?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80"
+      ],
+      "category": "Мясо"
     }
   ]
+}

@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="description" content="FreshMarket - Каталог товаров" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FreshMarket - Каталог</title>
+
+  <!-- Общие стили -->
+  <link rel="stylesheet" href="styles.css" />
+  
+  <!-- Иконки Font Awesome -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+  />
+</head>
+<body>
+  <!-- Шапка сайта -->
+  <header class="header">
+    <nav class="nav-container">
+      <!-- Логотип + ссылка на главную -->
+      <a href="index.html">
+        <div class="logo">FreshMarket</div>
+      </a>
+      
+      <!-- Навигация -->
+      <div class="nav-links" id="navMenu">
+        <a href="index.html">Главная</a>
+        <a href="catalog.html" class="active-link">Каталог</a>
+        <a href="index.html#about">О нас</a>
+        <a href="index.html#contacts">Контакты</a>
+      </div>
+
+      <!-- Переключатель темы -->
+      <button class="btn theme-toggle" id="themeToggle" aria-label="Переключить тему">
+        <i class="fas fa-moon" id="themeIcon"></i>
+      </button>
+
+      <!-- Кнопка корзины -->
+      <button class="btn btn-primary cart-btn" id="cartBtn">
+        <i class="fas fa-shopping-cart"></i>
+        <span id="cartCount">0</span>
+      </button>
+
+      <!-- Бургер-меню (мобильное) -->
+      <button
+        class="burger-menu"
+        id="burgerMenuBtn"
+        aria-label="Открыть меню"
+        aria-expanded="false"
+      >
+        <span class="burger-bar"></span>
+        <span class="burger-bar"></span>
+        <span class="burger-bar"></span>
+      </button>
+    </nav>
+  </header>
+
+  <!-- Секция фильтров/сортировки -->
+  <section class="section filter-section">
+    <h2>Ассортимент</h2>
+    <div class="filters">
+      <!-- Категории (овощи, фрукты, мясо и т.д.) -->
+      <select id="categorySelect">
+        <option value="">Все категории</option>
+      </select>
+
+      <!-- Сортировка по цене -->
+      <select id="sortSelect">
+        <option value="none">Сортировать по цене</option>
+        <option value="asc">По возрастанию</option>
+        <option value="desc">По убыванию</option>
+      </select>
+
+      <!-- Поле поиска -->
+      <div class="search-container">
+        <input type="text" id="searchInput" placeholder="Поиск..." />
+        <i class="fas fa-search search-icon"></i>
+      </div>
+    </div>
+  </section>
+
+  <!-- Сетка товаров -->
+  <section class="products-grid" id="productsContainer"></section>
+
+  <!-- Боковая панель корзины (sidebar) -->
+  <aside class="cart-sidebar" id="cartSidebar">
+    <div class="cart-header">
+      <h2>Корзина</h2>
+      <button class="close-cart" id="closeCartBtn">&times;</button>
+    </div>
+    <div id="cartItems"></div>
+    <div class="cart-total">
+      <h3>
+        Итого: <span id="cartTotal">0 ₸</span>
+      </h3>
+    </div>
+    <button class="btn btn-primary checkout-btn" id="checkoutBtn">
+      Оформить заказ
+    </button>
+  </aside>
+
+  <!-- Модальное окно оформления заказа -->
+  <div class="modal-overlay" id="checkoutModal">
+    <div class="modal">
+      <h2>Оформление заказа</h2>
+      <form id="checkoutForm">
+        <div class="form-group">
+          <label for="customerName">Ваше имя</label>
+          <input type="text" id="customerName" required />
+        </div>
+        <div class="form-group">
+          <label for="customerPhone">Номер телефона</label>
+          <input type="tel" id="customerPhone" required />
+        </div>
+        <div class="form-group">
+          <label for="paymentMethod">Способ оплаты</label>
+          <select id="paymentMethod" required>
+            <option value="Наличные">Наличные</option>
+            <option value="Карта">Карта</option>
+            <option value="Kaspi Pay">Kaspi Pay</option>
+          </select>
+        </div>
+        <button type="submit" class="btn btn-primary">Отправить в WhatsApp</button>
+        <button type="button" class="btn btn-secondary" id="cancelCheckoutBtn">Отмена</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Подвал -->
+  <footer class="footer">
+    <p>&copy; 2025 FreshMarket. Все права защищены.</p>
+  </footer>
+
+  <!-- Скрипт каталога (логика фильтров, корзины) -->
+  <script src="catalog.js"></script>
+</body>
+</html>
