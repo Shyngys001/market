@@ -6,9 +6,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>FreshMarket - Товар</title>
 
-  <!-- Общие стили -->
+  <!-- Подключаем общий файл стилей -->
   <link rel="stylesheet" href="styles.css" />
-  
+
   <!-- Иконки Font Awesome -->
   <link
     rel="stylesheet"
@@ -32,11 +32,6 @@
         <a href="index.html#contacts">Контакты</a>
       </div>
 
-      <!-- Переключатель темы -->
-      <button class="btn theme-toggle" id="themeToggle" aria-label="Переключить тему">
-        <i class="fas fa-moon" id="themeIcon"></i>
-      </button>
-
       <!-- Кнопка корзины -->
       <button class="btn btn-primary cart-btn" id="cartBtn">
         <i class="fas fa-shopping-cart"></i>
@@ -57,9 +52,11 @@
     </nav>
   </header>
 
-  <!-- Контейнер информации о товаре -->
-  <section class="section product-detail-section" id="productDetailContainer">
-    <!-- Здесь скрипт product.js отрисует всю информацию -->
+  <!-- Раздел с деталями о товаре (слайдер, описание) -->
+  <section class="product-hero">
+    <div class="product-hero-content" id="productDetailContainer">
+      <!-- Внутри будет динамически добавлено содержимое из product.js -->
+    </div>
   </section>
 
   <!-- Боковая панель корзины -->
@@ -111,7 +108,18 @@
     <p>&copy; 2025 FreshMarket. Все права защищены.</p>
   </footer>
 
-  <!-- Скрипт для детали товара -->
+  <!-- Скрипт для детали товара: логика слайдера, добавления в корзину и т.д. -->
   <script src="product.js"></script>
+  <script>
+    const burgerBtn = document.getElementById('burgerMenuBtn');
+    const navMenu = document.getElementById('navMenu');
+
+    burgerBtn.addEventListener('click', () => {
+      const expanded = burgerBtn.getAttribute('aria-expanded') === 'true';
+      burgerBtn.setAttribute('aria-expanded', !expanded);
+      navMenu.classList.toggle('nav-open');
+    });
+  </script>
+  
 </body>
 </html>

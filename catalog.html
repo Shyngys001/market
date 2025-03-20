@@ -32,11 +32,6 @@
         <a href="index.html#contacts">Контакты</a>
       </div>
 
-      <!-- Переключатель темы -->
-      <button class="btn theme-toggle" id="themeToggle" aria-label="Переключить тему">
-        <i class="fas fa-moon" id="themeIcon"></i>
-      </button>
-
       <!-- Кнопка корзины -->
       <button class="btn btn-primary cart-btn" id="cartBtn">
         <i class="fas fa-shopping-cart"></i>
@@ -61,19 +56,16 @@
   <section class="section filter-section">
     <h2>Ассортимент</h2>
     <div class="filters">
-      <!-- Категории (овощи, фрукты, мясо и т.д.) -->
       <select id="categorySelect">
         <option value="">Все категории</option>
       </select>
 
-      <!-- Сортировка по цене -->
       <select id="sortSelect">
         <option value="none">Сортировать по цене</option>
         <option value="asc">По возрастанию</option>
         <option value="desc">По убыванию</option>
       </select>
 
-      <!-- Поле поиска -->
       <div class="search-container">
         <input type="text" id="searchInput" placeholder="Поиск..." />
         <i class="fas fa-search search-icon"></i>
@@ -81,8 +73,10 @@
     </div>
   </section>
 
-  <!-- Сетка товаров -->
-  <section class="products-grid" id="productsContainer"></section>
+  <!-- Сетка товаров: будет 2 в каждом ряду на средних экранах -->
+  <section class="products-grid" id="productsContainer">
+    <!-- Сгенерируется catalog.js -->
+  </section>
 
   <!-- Боковая панель корзины (sidebar) -->
   <aside class="cart-sidebar" id="cartSidebar">
@@ -135,5 +129,17 @@
 
   <!-- Скрипт каталога (логика фильтров, корзины) -->
   <script src="catalog.js"></script>
+
+  <!-- JS: бургер-меню -->
+  <script>
+    const burgerBtn = document.getElementById('burgerMenuBtn');
+    const navMenu = document.getElementById('navMenu');
+
+    burgerBtn.addEventListener('click', () => {
+      const expanded = burgerBtn.getAttribute('aria-expanded') === 'true';
+      burgerBtn.setAttribute('aria-expanded', !expanded);
+      navMenu.classList.toggle('nav-open');
+    });
+  </script>
 </body>
 </html>

@@ -440,3 +440,1011 @@ body.dark-theme {
     width: 100%;
   }
 }
+
+/* -----------------------------
+   Дополнения для страницы товара
+------------------------------ */
+
+/* Общий контейнер на фоне (нежные тона/градиент) */
+.product-hero {
+  /* Нежно-зеленоватый градиент */
+  background: linear-gradient(120deg, #e8f5e9 0%, #f1f8e9 100%);
+  padding: 40px 20px;
+  min-height: 70vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Контент внутри hero */
+.product-hero-content {
+  width: 100%;
+  max-width: 1200px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.08);
+  padding: 30px;
+  display: flex;
+  flex-wrap: wrap; /* для мобильной адаптации */
+  gap: 20px;
+}
+
+/* Слайдер + информация */
+.product-detail-wrapper {
+  display: flex;
+  gap: 40px;
+  width: 100%;
+  flex-wrap: wrap;
+}
+
+/* Слайдер-контейнер */
+.slider-container {
+  flex: 1 1 400px;
+  max-width: 480px;
+  position: relative;
+  margin: 0 auto;
+  text-align: center;
+}
+
+/* Основное изображение (большое) */
+.slider-container img#mainImage {
+  width: 100%;
+  border-radius: 8px;
+  max-height: 400px;
+  object-fit: cover;
+  transition: 0.3s;
+}
+
+/* Кнопки слайдера (влево/вправо) */
+.slider-nav {
+  margin-top: 10px;
+}
+.slider-btn {
+  background: #fff;
+  border: 1px solid #ddd;
+  color: #444;
+  cursor: pointer;
+  padding: 8px 12px;
+  border-radius: 4px;
+  margin: 0 5px;
+  transition: background-color 0.3s;
+}
+.slider-btn:hover {
+  background-color: #f2f2f2;
+}
+
+/* Полоса миниатюр */
+.thumbs {
+  display: flex;
+  gap: 6px;
+  margin-top: 15px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.thumb-img {
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+  border: 2px solid transparent;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.thumb-img:hover {
+  border-color: #4caf50;
+}
+
+/* Правый блок с информацией */
+.product-info-block {
+  flex: 1 1 400px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  justify-content: center;
+}
+
+/* Название товара */
+.product-info-block h2 {
+  font-size: 1.8rem;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+/* Цена и описание */
+.product-price {
+  font-size: 1.4rem;
+  color: #4caf50;
+  font-weight: bold;
+}
+.product-desc {
+  line-height: 1.6;
+  color: #555;
+}
+
+/* Секция "Добавить в корзину" */
+.add-to-cart-section {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-top: 10px;
+  flex-wrap: wrap;
+}
+#quantityInput {
+  width: 60px;
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+/* Адаптивная верстка для небольших экранов */
+@media (max-width: 768px) {
+  .product-detail-wrapper {
+    gap: 20px;
+  }
+  .slider-container,
+  .product-info-block {
+    flex: 1 1 100%;
+    max-width: 100%;
+  }
+  .product-info-block h2 {
+    font-size: 1.4rem;
+  }
+  .product-price {
+    font-size: 1.2rem;
+  }
+} 
+
+
+/* -----------------------------
+   Улучшения для главной страницы
+------------------------------ */
+
+/* Hero-секция с нежным фоном / градиентом */
+.hero {
+  background: linear-gradient(120deg, #f3fce8 0%, #e3f9ed 100%);
+  padding: 50px 20px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 30px;
+  min-height: 70vh; /* чтобы занимала хороший кусок экрана */
+}
+.hero-text {
+  flex: 1 1 400px;
+  min-width: 250px;
+}
+.hero-title {
+  font-size: 2.2rem;
+  margin-bottom: 15px;
+  color: #2e7d32;
+  text-align: center;
+}
+.hero-subtitle {
+  font-size: 1rem;
+  line-height: 1.6;
+  max-width: 600px;
+  margin-bottom: 20px;
+  color: #444;
+  text-align: center;
+
+}
+.hero-btn {
+  font-size: 1rem;
+  padding: 10px 20px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+}
+
+/* Картинка Hero */
+.hero-image img {
+  max-width: 500px;
+  width: 100%;
+  border-radius: 8px;
+  object-fit: cover;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Секции (промо, о нас, контакты) */
+.section-desc {
+  max-width: 600px;
+  margin: 0 auto 20px; /* центрируем текст и даём отступ снизу */
+  color: #555;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+/* Promo-карточки: делаем их чуть больше и привлекательнее */
+.promo-cards {
+  display: flex;
+  gap: 30px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.promo-card {
+  width: 260px;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 20px 15px;
+  text-align: center;
+  transition: 0.3s;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.04);
+}
+.promo-card img {
+  width: 100%;
+  border-radius: 6px;
+  margin-bottom: 10px;
+}
+.promo-card h3 {
+  margin: 10px 0 5px;
+  color: #333;
+  font-size: 1.1rem;
+}
+.promo-card p {
+  font-size: 0.95rem;
+  color: #666;
+  margin-bottom: 15px;
+}
+.promo-card:hover {
+  box-shadow: 0 4px 15px rgba(0,0,0,0.06);
+  transform: translateY(-2px);
+}
+
+/* О нас (картинка чуть больше, с тенью) */
+.about-image-container {
+  margin: 20px auto 0;
+  max-width: 500px;
+}
+.about-image-container img {
+  width: 100%;
+  border-radius: 8px;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+}
+
+/* Контакты: чуть больше отступы */
+#contacts {
+  padding-bottom: 60px;
+}
+
+/* Адаптивность (в дополнение к существующей) */
+@media (max-width: 768px) {
+  .hero {
+    gap: 20px;
+    padding: 40px 20px;
+  }
+  .hero-title {
+    font-size: 1.8rem;
+  }
+  .promo-card {
+    width: 48%;
+  }
+}
+@media (max-width: 480px) {
+  .promo-card {
+    width: 100%;
+  }
+  .hero-title {
+    font-size: 1.6rem;
+  }
+}
+/* -----------------------------
+   1. Общий layout
+------------------------------ */
+
+/* Убедитесь, что эти стили перекрывают старые */
+
+body {
+  font-family: sans-serif; /* Можно Roboto, Open Sans, etc. */
+  background-color: #fff;  /* Светлый фон для минимализма */
+  color: #222;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+/* Шапка (header) */
+.header {
+  background-color: #fff; /* делаем хедер белым */
+  border-bottom: 1px solid #eee;
+  padding: 10px 20px;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+.header.dark-theme {
+  background-color: #333;
+}
+
+/* Логотип */
+.logo {
+  font-size: 1.4rem;
+  font-weight: bold;
+  color: #2e7d32; /* немного зелёного, чтобы подчеркнуть эко-настроение */
+}
+
+/* Навигация */
+.nav-container {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.nav-links {
+  display: flex;
+  gap: 15px;
+  margin-left: auto;
+}
+.nav-links a {
+  color: #444;
+  font-weight: 500;
+  transition: color 0.2s;
+}
+.nav-links a:hover {
+  color: #2e7d32;
+}
+
+/* Бургер-меню */
+.burger-menu {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  margin-left: auto;
+}
+.burger-bar {
+  display: block;
+  width: 25px;
+  height: 3px;
+  margin: 5px;
+  background: #2e7d32;
+  transition: 0.3s;
+}
+.nav-open {
+  display: flex !important;
+}
+
+/* Активная ссылка (underline) */
+.active-link {
+  color: #2e7d32;
+  text-decoration: underline;
+}
+
+/* -----------------------------
+   2. Hero-секция (минимализм)
+------------------------------ */
+
+/* Контейнер hero */
+.hero {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  padding: 40px 20px;
+  gap: 20px;
+  border-bottom: 1px solid #eee; /* отделяем hero от остального */
+}
+.hero-text {
+  flex: 1 1 400px;
+  justify-content: center;
+  margin: 0 auto;
+  text-align: center;
+}
+.hero-title {
+  font-size: 2rem;
+  color: #2e7d32;
+  margin-bottom: 15px;
+}
+.hero-subtitle {
+  font-size: 1rem;
+  color: #555;
+  line-height: 1.5;
+  margin-bottom: 20px;
+  max-width: 600px;
+}
+.hero-btn {
+  font-size: 1rem;
+  padding: 10px 20px;
+}
+.hero-image {
+  flex: 1 1 400px;
+  text-align: center;
+}
+.hero-image img {
+  max-width: 500px;
+  width: 100%;
+  border-radius: 8px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+  object-fit: cover;
+}
+
+/* -----------------------------
+   3. Секции (промо, about, contacts)
+------------------------------ */
+
+.section {
+  padding: 40px 20px;
+  text-align: center;
+  border-bottom: 1px solid #f5f5f5;
+}
+.section:last-of-type {
+  border-bottom: none; /* чтобы последняя секция не имела линии снизу */
+}
+.section h2 {
+  margin-bottom: 15px;
+  font-size: 1.6rem;
+  color: #2e7d32;
+}
+.section-desc {
+  color: #777;
+  max-width: 600px;
+  margin: 0 auto 25px;
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+/* Promo-карточки */
+.promo-cards {
+  display: flex;
+  gap: 30px;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+.promo-card {
+  width: 250px;
+  background-color: #fff;
+  border: 1px solid #eee;
+  border-radius: 8px;
+  padding: 15px;
+  text-align: center;
+  transition: 0.3s;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+}
+.promo-card img {
+  width: 100%;
+  border-radius: 6px;
+  margin-bottom: 10px;
+}
+.promo-card h3 {
+  margin: 10px 0 5px;
+  font-size: 1.1rem;
+}
+.promo-card p {
+  font-size: 0.9rem;
+  color: #555;
+  margin-bottom: 15px;
+}
+.promo-card:hover {
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+  transform: translateY(-2px);
+}
+
+/* О нас: картинка побольше */
+.about-image-container {
+  max-width: 500px;
+  margin: 25px auto 0;
+}
+.about-image-container img {
+  width: 100%;
+  border-radius: 8px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+}
+
+/* -----------------------------
+   4. Подвал (footer)
+------------------------------ */
+
+.footer {
+  background-color: #fff;
+  border-top: 1px solid #eee;
+  padding: 20px;
+  text-align: center;
+}
+.footer-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+.footer-wrapper p {
+  color: #888;
+  font-size: 0.9rem;
+}
+
+/* -----------------------------
+   5. Кнопки
+------------------------------ */
+
+.btn {
+  display: inline-block;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+}
+.btn-primary {
+  background-color: #2e7d32;
+  color: #fff;
+}
+.btn-primary:hover {
+  background-color: #256428;
+}
+.btn-secondary {
+  background-color: #ececec;
+  color: #333;
+}
+.btn-secondary:hover {
+  background-color: #ddd;
+}
+
+/* -----------------------------
+   6. Адаптивность
+------------------------------ */
+
+@media (max-width: 768px) {
+  .hero {
+    flex-direction: column;
+    padding: 30px 20px;
+  }
+  .hero-image {
+    order: -1; /* картинка сверху, если хотите */
+  }
+  .promo-card {
+    width: 45%; /* две колонки */
+  }
+}
+
+@media (max-width: 480px) {
+  .promo-card {
+    width: 100%; /* одна колонка */
+  }
+  .hero-title {
+    font-size: 1.6rem;
+  }
+}
+
+/* ---------------------------------
+   1. Сброс и базовые стили
+---------------------------------- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: sans-serif; /* Или Roboto, Open Sans и т.д. */
+  background-color: #fff;  /* Светлый фон (минимализм) */
+  color: #222;
+  transition: background-color 0.3s, color 0.3s;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+ul, li {
+  list-style: none;
+}
+
+/* Темная тема (если используете переключение) */
+body.dark-theme {
+  background-color: #111;
+  color: #eee;
+}
+
+/* ---------------------------------
+   2. Шапка (header) и навигация
+---------------------------------- */
+.header {
+  background-color: #fff; 
+  border-bottom: 1px solid #eee;
+  padding: 10px 20px;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+.header.dark-theme {
+  background-color: #333;
+}
+.nav-container {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.logo {
+  font-size: 1.4rem;
+  font-weight: bold;
+  color: #2e7d32; /* зелёный для эко-соответствия */
+}
+.nav-links {
+  display: flex;
+  gap: 15px;
+  margin-left: auto;
+}
+.nav-links a {
+  color: #444;
+  font-weight: 500;
+  transition: color 0.2s;
+}
+.nav-links a:hover {
+  color: #2e7d32;
+}
+.active-link {
+  color: #2e7d32;
+  text-decoration: underline;
+}
+
+/* Бургер-меню */
+.burger-menu {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  margin-left: auto;
+}
+.burger-bar {
+  display: block;
+  width: 25px;
+  height: 3px;
+  margin: 5px;
+  background: #2e7d32;
+  transition: 0.3s;
+}
+.nav-open {
+  display: flex !important;
+}
+
+/* ---------------------------------
+   3. Hero-секция (главный баннер)
+---------------------------------- */
+.hero {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  padding: 40px 20px;
+  gap: 20px;
+  border-bottom: 1px solid #eee; /* тонкая линия снизу для разделения */
+}
+.hero-text {
+  flex: 1 1 400px;
+}
+.hero-title {
+  font-size: 2rem;
+  color: #2e7d32;
+  margin-bottom: 15px;
+}
+.hero-subtitle {
+  font-size: 1rem;
+  color: #555;
+  line-height: 1.5;
+  margin-bottom: 20px;
+  max-width: 600px;
+}
+.hero-btn {
+  font-size: 1rem;
+  padding: 10px 20px;
+}
+.hero-image {
+  flex: 1 1 400px;
+  text-align: center;
+}
+.hero-image img {
+  max-width: 500px;
+  width: 100%;
+  border-radius: 8px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+  object-fit: cover;
+}
+
+/* ---------------------------------
+   4. Секции (промо, about, contacts)
+---------------------------------- */
+.section {
+  padding: 40px 20px;
+  text-align: center;
+  border-bottom: 1px solid #f5f5f5;
+}
+.section:last-of-type {
+  border-bottom: none; /* у последней секции убираем линию */
+}
+.section h2 {
+  margin-bottom: 15px;
+  font-size: 1.6rem;
+  color: #2e7d32;
+}
+.section-desc {
+  color: #777;
+  max-width: 600px;
+  margin: 0 auto 25px;
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+/* Промо-карточки */
+.promo-cards {
+  display: flex;
+  gap: 30px;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+.promo-card {
+  width: 250px;
+  background-color: #fff;
+  border: 1px solid #eee;
+  border-radius: 8px;
+  padding: 15px;
+  text-align: center;
+  transition: 0.3s;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+}
+.promo-card img {
+  width: 100%;
+  border-radius: 6px;
+  margin-bottom: 10px;
+}
+.promo-card h3 {
+  margin: 10px 0 5px;
+  font-size: 1.1rem;
+  color: #333;
+}
+.promo-card p {
+  font-size: 0.9rem;
+  color: #555;
+  margin-bottom: 15px;
+}
+.promo-card:hover {
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+  transform: translateY(-2px);
+}
+
+/* О нас (картинка) */
+.about-image-container {
+  max-width: 500px;
+  margin: 25px auto 0;
+}
+.about-image-container img {
+  width: 100%;
+  border-radius: 8px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+}
+
+/* ---------------------------------
+   5. Подвал (footer)
+---------------------------------- */
+.footer {
+  background-color: #fff;
+  border-top: 1px solid #eee;
+  padding: 20px;
+  text-align: center;
+}
+.footer-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+.footer-wrapper p {
+  color: #888;
+  font-size: 0.9rem;
+}
+
+/* ---------------------------------
+   6. Кнопки (продуманный минимализм)
+---------------------------------- */
+.btn {
+  display: inline-block;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+}
+.btn-primary {
+  background-color: #2e7d32;
+  color: #fff;
+}
+.btn-primary:hover {
+  background-color: #256428;
+}
+.btn-secondary {
+  background-color: #ececec;
+  color: #333;
+}
+.btn-secondary:hover {
+  background-color: #ddd;
+}
+
+/* ---------------------------------
+   7. Анимации (fade-in, slide-up)
+---------------------------------- */
+.fade-in {
+  animation: fadeIn 0.8s forwards;
+}
+.slide-up {
+  animation: slideUp 0.8s forwards;
+}
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+@keyframes slideUp {
+  from { transform: translateY(20px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+/* ---------------------------------
+   8. Адаптивность
+---------------------------------- */
+@media (max-width: 768px) {
+  .hero {
+    flex-direction: column;
+    padding: 30px 20px;
+  }
+  .hero-image {
+    order: -1; /* если хотите картинку сверху, раскомментируйте */
+  }
+  .promo-card {
+    width: 45%; /* 2 колонки */
+  }
+}
+
+@media (max-width: 480px) {
+  .promo-card {
+    width: 100%; /* 1 колонка на очень узких экранах */
+  }
+  .hero-title {
+    font-size: 1.6rem;
+  }
+}
+
+
+/* ---------------------------------
+   Форма для сотрудничества
+---------------------------------- */
+.cooperation-form-container {
+  max-width: 600px;
+  margin: 0 auto;
+  text-align: left; /* чтобы поля и лейблы были нагляднее */
+}
+.cooperation-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.cooperation-form .form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+.cooperation-form label {
+  font-weight: 500;
+  color: #333;
+}
+.cooperation-form input,
+.cooperation-form textarea {
+  padding: 8px 10px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 0.95rem;
+}
+.cooperation-form button[type="submit"] {
+  align-self: flex-start; /* кнопка слева */
+  padding: 10px 20px;
+}
+
+/* ---------------------------------
+   Соцсети в футере (минимализм)
+---------------------------------- */
+.social-links {
+  display: flex;
+  gap: 15px;
+  margin-top: 10px;
+  justify-content: center; /* или flex-start, если нужно слева */
+}
+.social-link {
+  font-size: 1.2rem;
+  color: #aaa;
+  transition: color 0.3s;
+}
+.social-link:hover {
+  color: #2e7d32; /* зелёный */
+}
+
+
+/* Основная сетка товаров (catalog) */
+/* Сейчас используем products-grid, сделаем 2 колонки */
+.products-grid {
+  display: grid;
+  gap: 20px;
+  padding: 20px;
+  justify-content: center;
+  /* Допустим, делаем 4 колонки на компе */
+  grid-template-columns: repeat(5, minmax(140px, 1fr));
+}
+/* Карточка товара */
+.product-card {
+  background-color: #fff;
+  border: 1px solid #eee;
+  border-radius: 8px;
+  text-align: center;
+  padding: 15px;
+  transition: 0.3s;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+}
+.product-card img {
+  width: 100%;
+  height: 140px; /* поменьше высота */
+  object-fit: cover;
+  border-radius: 6px;
+  margin-bottom: 10px;
+}
+.product-card h3 {
+  font-size: 1rem;
+  margin: 5px 0;
+  color: #333;
+}
+.product-card .product-price {
+  color: #2e7d32;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+/* Hover-эффект */
+.product-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+/* При очень маленькой ширине (меньше 480px) – 1 колонка */
+@media (max-width: 480px) {
+  .products-grid {
+    grid-template-columns: 1fr;
+  }
+}
+/* 1. Скрываем меню при ширине больше 768px */
+.burger-menu {
+  display: none; /* изначально скрыт, но показываем через медиа-запрос */
+}
+
+/* На мобильных (до 768px) – по 2 карточки в ряд */
+@media (max-width: 768px) {
+  .products-grid {
+    grid-template-columns: repeat(2, minmax(140px, 1fr));
+  }
+}
+
+/* 2. Адаптив: при узком экране показываем бургер, скрываем обычное меню */
+@media (max-width: 768px) {
+  .burger-menu {
+    display: block; /* показываем бургер */
+    margin-left: auto; 
+  }
+  .nav-links {
+    position: absolute;    /* чтобы блок всплывал */
+    top: 60px;            /* чуть ниже шапки */
+    left: 0;
+    right: 0;
+    background-color: #4caf50;
+    flex-direction: column;
+    gap: 15px;
+    padding: 15px 20px;
+    display: none;        /* по умолчанию скрыто */
+    z-index: 999;         /* чтобы меню было поверх */
+    transition: all 0.3s;
+  }
+  .nav-links.nav-open {
+    display: flex;        /* при нажатии – показываем */
+  }
+  /* Убираем margin-left: auto у .nav-links для мобильной версии */
+}
+
+/* Если нужно, чтобы весь экран перекрывал: 
+.nav-links {
+  height: calc(100vh - 60px); // или 100vh 
+  overflow-y: auto;
+}
+*/
