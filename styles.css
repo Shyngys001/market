@@ -712,9 +712,12 @@ body.dark-theme {
 /* Адаптивность (в дополнение к существующей) */
 @media (max-width: 768px) {
   .hero {
+    display: flex;
+    flex-direction: column-reverse; 
     gap: 20px;
     padding: 40px 20px;
   }
+  
   .hero-title {
     font-size: 1.8rem;
   }

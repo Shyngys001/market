@@ -107,7 +107,7 @@ function displayProducts(products) {
             class="btn btn-primary" 
             onclick="addProductToCart(event, ${prod.id})"
           >
-            Добавить в корзину
+             в корзину
           </button>
         </div>
       </div>
