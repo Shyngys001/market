@@ -118,7 +118,7 @@ function renderProductDetail() {
         <p class="product-desc">${currentProduct.description}</p>
         <div class="add-to-cart-section">
           <label>Количество:</label>
-          <input type="number" id="quantityInput" value="1" min="1" max="100" />
+          <input type="number" id="quantityInput" value="50" min="50" max="100" />
           <button class="btn btn-primary" id="addToCartBtn">В корзину</button>
         </div>
       </div>
