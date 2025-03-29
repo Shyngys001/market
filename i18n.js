@@ -44,7 +44,6 @@ window.i18n = {
       checkoutName: "Ваше имя",
       checkoutPhone: "Номер телефона",
       checkoutPayment: "Способ оплаты",
-      payCash: "Наличные",
       payCard: "Карта",
       payKaspi: "Kaspi Pay",
       checkoutBtnSend: "Отправить в WhatsApp",
