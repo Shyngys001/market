@@ -140,26 +140,26 @@
       Заполните форму, и мы свяжемся с вами для обсуждения деталей сотрудничества.
     </p>
     <div class="cooperation-form-container slide-up">
-      <form id="cooperationForm" class="cooperation-form">
+      <form id="cooperationForm" class="cooperation-form" action="http://localhost:8000/cooperation" method="POST">
         <div class="form-group">
           <label for="partnerName">Название / Имя</label>
-          <input type="text" id="partnerName" required />
+          <input type="text" id="partnerName" name="partnerName" required />
         </div>
         <div class="form-group">
           <label for="partnerPhone">Телефон</label>
-          <input type="tel" id="partnerPhone" required />
+          <input type="tel" id="partnerPhone" name="partnerPhone" required />
         </div>
         <div class="form-group">
           <label for="partnerEmail">Email</label>
-          <input type="email" id="partnerEmail" required />
+          <input type="email" id="partnerEmail" name="partnerEmail" required />
         </div>
         <div class="form-group">
-          <label for="partnerName">Реквизиты Компании</label>
-          <input type="text" id="partnerName" required />
+          <label for="companyDetails">Реквизиты Компании</label>
+          <input type="text" id="companyDetails" name="companyDetails" required />
         </div>
         <div class="form-group">
           <label for="productRange">Какие продукты вы предлагаете?</label>
-          <textarea id="productRange" rows="3" required></textarea>
+          <textarea id="productRange" name="productRange" rows="3" required></textarea>
         </div>
         <button type="submit" class="btn btn-primary">Отправить заявку</button>
       </form>
@@ -201,22 +201,27 @@
     });
 
     // Форма сотрудничества
-    const cooperationForm = document.getElementById('cooperationForm');
-    cooperationForm.addEventListener('submit', (e) => {
-      e.preventDefault();
-      const name = document.getElementById('partnerName').value.trim();
-      const phone = document.getElementById('partnerPhone').value.trim();
-      const email = document.getElementById('partnerEmail').value.trim();
-      const range = document.getElementById('productRange').value.trim();
+    const form = document.getElementById('cooperationForm');
 
-      if (!name || !phone || !email || !range) {
-        alert('Пожалуйста, заполните все поля.');
-        return;
-      }
+    form.addEventListener('submit', function (e) {
+  e.preventDefault();
 
-      alert(`Заявка отправлена!\n\nИмя: ${name}\nТелефон: ${phone}\nEmail: ${email}\nПродукция: ${range}`);
-      cooperationForm.reset();
-    });
+  const formData = new FormData(form);
+
+  fetch("https://script.google.com/macros/s/AKfycbyKMTgOvvRiFeFgTLQUIf-6sqdmdfv75x22Y2V6J9FXE_odftXoRqw6S1lPdkUJv96l0A/exec", {
+    method: "POST",
+    body: formData
+  })
+  .then(response => response.text())
+  .then(res => {
+    alert("Заявка успешно отправлена!");
+    form.reset();
+  })
+  .catch(err => {
+    alert("Ошибка при отправке заявки.");
+    console.error("Ошибка:", err);
+  });
+});
     
   </script>
   
