@@ -72,13 +72,35 @@
     },
     {
       "id": 6,
-      "name": "Ұн",
+      "name": "Кефир",
       "price": 2200,
-      "description": "Нежная курица без гормонов. Подойдёт для запекания, жарки и супов.",
+      "description": "Свежий кефир",
+      "images": [
+        "https://s0.rbk.ru/v6_top_pics/media/img/4/37/347256126368374.jpeg"
+      ],
+      "category": "Продукты питания"
+    }
+    ,
+    {
+      "id": 6,
+      "name": "Мука",
+      "price": 2200,
+      "description": "Мука 5 кг",
       "images": [
         "https://azattyq-ruhy.kz/cache/imagine/1200/uploads/news/2023/07/03/64a24f0bc32ba126966790.jpg"
       ],
-      "category": "Мучное изделие"
+      "category": "Продукты питания"
+    }
+    ,
+    {
+      "id": 6,
+      "name": "Молоко",
+      "price": 2200,
+      "description": "Свежее молоко",
+      "images": [
+        "https://vestnikapk.ru/upload/iblock/c18/c18a934499271860c62492bbacc61d0b.jpg"
+      ],
+      "category": "Молочные изделия"
     }
   ]
 }

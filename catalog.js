@@ -248,7 +248,7 @@ function sendOrderToWhatsApp(e) {
   message += `\nИтого: ${formatPrice(total)}`;
 
   const encoded = encodeURIComponent(message);
-  const whatsappURL = `https://wa.me/77473732348?text=${encoded}`;
+  const whatsappURL = `https://wa.me/77082763927?text=${encoded}`;
   window.open(whatsappURL, '_blank');
   closeCheckoutModal();
 }
