@@ -103,13 +103,13 @@
     },
     {
       "id": 6,
-      "name": "Молоко",
+      "name": "Макароны",
       "price": 2200,
-      "description": "Свежее молоко",
+      "description": "Макароны",
       "images": [
         "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSasgfXqojyEu8D_4mtU4_A0VXbJIZIg7jKPQ&s"
       ],
-      "category": "Молочные изделия"
+      "category": "Продукты питания"
     }
 
     
