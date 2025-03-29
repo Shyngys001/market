@@ -233,13 +233,14 @@ function sendOrderToWhatsApp(e) {
   const name = document.getElementById('customerName').value.trim();
   const phone = document.getElementById('customerPhone').value.trim();
   const payment = document.getElementById('paymentMethod').value;
+  const rekviz = document.getElementById('customerrek').value.trim();
 
   if (!name || !phone) {
     alert("Пожалуйста, заполните все поля!");
     return;
   }
 
-  let message = `Здравствуйте! Хочу оформить заказ:\n\nИмя: ${name}\nТелефон: ${phone}\nОплата: ${payment}\n\n`;
+  let message = `Здравствуйте! Хочу оформить заказ:\n\nИмя: ${name}\nТелефон: ${phone}\nОплата: ${payment}\n Реквизиты: ${rekviz}\n`;
   let total = 0;
   cart.forEach(item => {
     message += `- ${item.name}, кол-во: ${item.quantity}, цена: ${formatPrice(item.price)}\n`;
