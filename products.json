@@ -69,6 +69,16 @@
         "https://eldala.kz/uploads/all/57/35/ce/5735cee3c6b113abf3954c3488a96fda.jpg"
       ],
       "category": "Мясо"
+    },
+    {
+      "id": 6,
+      "name": "Ұн",
+      "price": 2200,
+      "description": "Нежная курица без гормонов. Подойдёт для запекания, жарки и супов.",
+      "images": [
+        "https://azattyq-ruhy.kz/cache/imagine/1200/uploads/news/2023/07/03/64a24f0bc32ba126966790.jpg"
+      ],
+      "category": "Мучное изделие"
     }
   ]
 }

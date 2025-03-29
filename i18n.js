@@ -11,7 +11,7 @@ window.i18n = {
       navAbout: "О нас",
       navContacts: "Контакты",
   
-      heroTitle: "Добро пожаловать в FreshMarket",
+      heroTitle: "Добро пожаловать в Qaz-Zakup",
       heroSubtitle: "Свежие овощи, фрукты, мясо и многое другое",
       heroBtn: "Перейти в каталог",
   
@@ -63,7 +63,7 @@ window.i18n = {
       navCatalog: "Каталог",
       navAbout: "Біз туралы",
       navContacts: "Байланыс",
-      heroTitle: "FreshMarket-ке қош келдіңіз",
+      heroTitle: "Qaz-Zakup-ке қош келдіңіз",
       heroSubtitle: "Жаңа көкөністер, жемістер, ет және т.б.",
       heroBtn: "Каталогқа өту",
   
