@@ -90,8 +90,7 @@
         "https://azattyq-ruhy.kz/cache/imagine/1200/uploads/news/2023/07/03/64a24f0bc32ba126966790.jpg"
       ],
       "category": "Продукты питания"
-    }
-    ,
+    },
     {
       "id": 6,
       "name": "Молоко",
@@ -101,6 +100,18 @@
         "https://vestnikapk.ru/upload/iblock/c18/c18a934499271860c62492bbacc61d0b.jpg"
       ],
       "category": "Молочные изделия"
+    },
+    {
+      "id": 6,
+      "name": "Молоко",
+      "price": 2200,
+      "description": "Свежее молоко",
+      "images": [
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSasgfXqojyEu8D_4mtU4_A0VXbJIZIg7jKPQ&s"
+      ],
+      "category": "Молочные изделия"
     }
+
+    
   ]
 }
